@@ -1,0 +1,28 @@
+.MainNav {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav social";
+    color: rgb(82, 56, 56);
+}
+
+.LeftNav {
+    display: flex;
+    justify-content: space-around;
+    grid-area: nav;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.Social {
+    display: flex;
+    justify-self: right;
+    justify-content: space-around; 
+    grid-area: social;
+    width: 100%;
+    max-width: 300px;
+}
+
+.Social .Icon {
+    width: 1.5em;
+}

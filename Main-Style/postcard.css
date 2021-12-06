@@ -1,0 +1,35 @@
+.PostCard {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+}
+
+.PostCard:hover {
+    border: 3px solid #144114;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+
+.CardTitle {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    width: 60%;
+    color: #dbbaba;
+    font-size: x-large;
+    z-index: 1;
+}
+
+.CardImage {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100);
+}
+
+.CardImage.Flip {
+    transform: scaleX(-1);
+}
