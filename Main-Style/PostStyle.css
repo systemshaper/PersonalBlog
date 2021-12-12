@@ -9,7 +9,7 @@ body {
     height: 100%;
 }
 
-p, strong, em, u {
+p, b, em, u {
     font-family: 'Arial Narrow Bold', sans-serif;
     color: rgb(44, 48, 43);
     line-height: 150%;
@@ -51,20 +51,31 @@ q {
     font-family: 'Arial Narrow Bold', sans-serif;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "back"
+    "headline"
+    "author";
+}
+
 .BackArrow {
     width: 1.5em;
     margin-bottom: -8px;
+    grid-area: back;
+}
+
+.Headline {
+    grid-area: headline;
 }
 
 .PopAuthor {
-    display: none;
     border: 1px dotted rgb(82, 56, 56);
     margin: 20px;
     padding: 15px;
-    max-width: 300px;
-}
-
-.PostVictim:hover + .PopAuthor {
+    grid-area: author;
     display: block;
 }
 
@@ -135,7 +146,15 @@ article {
         margin-right: 100px;
     }
 
-    .PostVictim:hover + .PopAuthor {
+    header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "back empty"
+        "headline author";
+    }
+
+    .PopAuthor {
         display: grid;
         grid-template-columns: 130px 1fr;
         max-width: 500px;
@@ -143,5 +162,9 @@ article {
 
     .AuthorAvatar {
         margin: auto;
+    }
+
+    .Headline {
+        margin-top: 20px;
     }
 }
